@@ -1,0 +1,9 @@
+<!ELEMENT display-name (#PCDATA)>
+<!ELEMENT welcome-file-list (welcome-file)>
+<!ELEMENT welcome-file (#PCDATA)>
+<!ELEMENT filter (filter-name,filter-class)>
+<!ELEMENT filter-name (#PCDATA)>
+<!ELEMENT filter-class (#PCDATA)>
+<!ELEMENT filter-mapping (filter-name,url-pattern)>
+<!ELEMENT url-pattern (#PCDATA)>
+<!ELEMENT web-app EMPTY>

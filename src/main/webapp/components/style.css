@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+body{
+	margin: 0rem;
+}
+
+/*For welcome header*/
+header{
+	background-color: #000080;
+	height: 4.5rem;
+}
+header div{
+	color: white;
+	font-family: 'Karla', sans-serif;
+	font-size: 1.7rem;
+	display: flex;
+}
+header p{
+	display: block;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+header nav{
+	padding-top: 0.1rem;
+}
+header .navi-logo-con{
+	margin-left: 10rem;
+	padding-top: 0.4rem;
+}
+header .navi-bar .navi-logo-img{
+	height: 3.5rem;
+}
+.navi-bar input[type=text]{
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+	width: 15rem;
+	border-bottom-left-radius: 0.2rem;
+  	border-top-left-radius: 0.2rem;
+}
+.navi-bar .search-con {
+  float: right;
+  margin-left: 7rem;
+  padding-top: 0.5rem;
+}
+.navi-bar .search-con button {
+  	float: right;
+  	padding: 6px 10px;
+  	margin-top: 8px;
+  	margin-right: 16px;
+  	background: #ddd;
+  	font-size: 17px;
+  	border: none;
+  	cursor: pointer;
+  	border-bottom-right-radius: 0.2rem;
+  	border-top-right-radius: 0.2rem;
+}
+.navi-con{
+	margin-top: 0.5rem;
+	margin-left: 6rem;
+	float: right;
+}
+.navi-con .navi-link{
+	margin: 0 0.6rem;
+	width: 7.5rem;
+}
+.navi-con .navi-link a{
+	color: white;
+	margin: auto;
+}
+.navi-con .navi-link a:hover {
+	text-decoration: none;
+}
+.navi-con .navi-link .navi-icon{
+	display: block;
+	font-size: 1.8rem;
+}
+.navi-con .navi-link .navi-text{
+	margin: 0rem 0.5rem;
+	font-size: 1.0rem;
+}
+.dropdown-menu{
+	width: 8rem;
+	min-width: 0rem;
+}
+.dropdown-menu a{
+	color: #000080;
+}
+.dropdown-item:hover{
+	background-color: transparent;
+	color: black;
+}

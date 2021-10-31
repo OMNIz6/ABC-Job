@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="" extends="struts-default">
+	
+		<action name="index">
+			<result>/reg.jsp</result>
+		</action>
+		<action name="register">
+			<result>/reg.jsp</result>
+		</action>
+		<action name="log_in">
+			<result>/log_in.jsp</result>
+		</action>
+		<action name="forget_password" class="sdl.abc.controller.ForgetPass">
+			<result>/forget_password.jsp</result>
+		</action>
+		<action name="log_out">
+			<result>/log_in.jsp</result>
+		</action>
+		<action name="confirm_email">
+			<result>/confirmEmail.jsp</result>
+		</action>
+		
+		<action name="profile_edit" class="sdl.abc.controller.MyProfile">
+			<result>/editprofile.jsp</result>
+		</action>
+		
+		<action name="my_profile" class="sdl.abc.controller.MyProfile">
+			<result>/myprofile.jsp</result>
+		</action>
+		<action name="other_profile" class="sdl.abc.controller.ViewProfile">
+			<result>/otherprofile.jsp</result>
+		</action>
+		
+		<action name="search_result" class="sdl.abc.controller.SearchAction">
+			<result>/search_result.jsp</result>
+		</action>
+		
+		<action name="regProcess" class="sdl.abc.controller.RegProcess">
+			<result name="success">/thank.jsp</result>
+			<result name="fail">/reg.jsp</result>
+		</action>
+		
+		<action name="loginProcess" class="sdl.abc.controller.LoginAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">home</param>
+			</result>
+			<result name="fail">/log_in.jsp</result>
+		</action>
+		
+		<action name="logout" class="sdl.abc.controller.LogoutAction">
+			<result name="success">/log_in.jsp</result>
+		</action>
+		
+		<action name="editProcess" class="sdl.abc.controller.EditProfileProcessAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">my_profile</param>
+			</result>
+			<result name ="fail">/editprofile.jsp</result>
+		</action>
+		
+		<action name="delete" class="sdl.abc.controller.DeleteAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search_result</param>
+				<param name="keyword">${keyword}</param>
+			</result>
+		</action>
+	
+		<action name="ban" class="sdl.abc.controller.BanAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search_result</param>
+				<param name="keyword">${keyword}</param>
+			</result>
+		</action>
+		
+		<action name="confirmProcess" class ="sdl.abc.controller.ConfirmEmail">
+			<result name="success" type="redirectAction">
+				<param name="actionName">forget_password</param>
+				<param name="email">${email}</param>
+			</result>
+			<result name="fail">/confirmEmail.jsp</result>
+		</action>
+		
+		<action name="changePass" class ="sdl.abc.controller.ChangePassword">
+			<result name="success">/log_in.jsp</result>
+		</action>
+		
+		<action name="home" class ="sdl.abc.controller.GetJobs">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="view_job" class ="sdl.abc.controller.JobDetail">
+			<result name="success">/job_detail.jsp</result>
+		</action>
+		
+		<action name="apply" class ="sdl.abc.controller.ApplyJob">
+			<result name="success" type="redirectAction">
+				<param name="actionName">home</param>
+			</result>
+		</action>
+	</package>
+</struts>
